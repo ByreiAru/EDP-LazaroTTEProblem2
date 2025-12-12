@@ -38,7 +38,7 @@ Partial Class Form1
         Me.Label4 = New System.Windows.Forms.Label()
         Me.ComboBoxGenre = New System.Windows.Forms.ComboBox()
         Me.NumericUpDownDuration = New System.Windows.Forms.NumericUpDown()
-        Me.TextBoxId = New System.Windows.Forms.TextBox()
+        Me.TxtID = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDownDuration, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -56,7 +56,7 @@ Partial Class Form1
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(399, 37)
         Me.btnDelete.TabIndex = 23
-        Me.btnDelete.Text = "DELETE (Remove Data)"
+        Me.btnDelete.Text = "Delete Track"
         Me.btnDelete.UseVisualStyleBackColor = False
         '
         'btnUpdate
@@ -66,7 +66,7 @@ Partial Class Form1
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(399, 37)
         Me.btnUpdate.TabIndex = 22
-        Me.btnUpdate.Text = "UPDATE (Edit Data)"
+        Me.btnUpdate.Text = "Update Track"
         Me.btnUpdate.UseVisualStyleBackColor = False
         '
         'BtnRead
@@ -76,17 +76,19 @@ Partial Class Form1
         Me.BtnRead.Name = "BtnRead"
         Me.BtnRead.Size = New System.Drawing.Size(397, 37)
         Me.BtnRead.TabIndex = 21
-        Me.BtnRead.Text = "READ (Retrieve Data)"
+        Me.BtnRead.Text = "Load Track"
         Me.BtnRead.UseVisualStyleBackColor = False
         '
         'DataGridView1
         '
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.InactiveBorder
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(109, 38)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.Size = New System.Drawing.Size(693, 134)
+        Me.DataGridView1.Size = New System.Drawing.Size(663, 134)
         Me.DataGridView1.TabIndex = 20
         '
         'BtnCreate
@@ -96,7 +98,7 @@ Partial Class Form1
         Me.BtnCreate.Name = "BtnCreate"
         Me.BtnCreate.Size = New System.Drawing.Size(399, 37)
         Me.BtnCreate.TabIndex = 19
-        Me.BtnCreate.Text = "CREATE (Insert Data)"
+        Me.BtnCreate.Text = "Add Track"
         Me.BtnCreate.UseVisualStyleBackColor = False
         '
         'Label3
@@ -164,7 +166,7 @@ Partial Class Form1
         'ComboBoxGenre
         '
         Me.ComboBoxGenre.FormattingEnabled = True
-        Me.ComboBoxGenre.Items.AddRange(New Object() {"Pop", "Rock", "Indie", "Jazz", "Country"})
+        Me.ComboBoxGenre.Items.AddRange(New Object() {"Pop", "Rock", "Jazz", "Hip-Hop", "Classical"})
         Me.ComboBoxGenre.Location = New System.Drawing.Point(140, 268)
         Me.ComboBoxGenre.Name = "ComboBoxGenre"
         Me.ComboBoxGenre.Size = New System.Drawing.Size(632, 21)
@@ -177,13 +179,13 @@ Partial Class Form1
         Me.NumericUpDownDuration.Size = New System.Drawing.Size(632, 20)
         Me.NumericUpDownDuration.TabIndex = 27
         '
-        'TextBoxId
+        'TxtID
         '
-        Me.TextBoxId.BackColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.TextBoxId.Location = New System.Drawing.Point(140, 189)
-        Me.TextBoxId.Name = "TextBoxId"
-        Me.TextBoxId.Size = New System.Drawing.Size(631, 20)
-        Me.TextBoxId.TabIndex = 29
+        Me.TxtID.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.TxtID.Location = New System.Drawing.Point(140, 189)
+        Me.TxtID.Name = "TxtID"
+        Me.TxtID.Size = New System.Drawing.Size(631, 20)
+        Me.TxtID.TabIndex = 29
         '
         'Label5
         '
@@ -199,7 +201,7 @@ Partial Class Form1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.TextBoxId)
+        Me.Controls.Add(Me.TxtID)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.NumericUpDownDuration)
         Me.Controls.Add(Me.ComboBoxGenre)
@@ -239,6 +241,6 @@ Partial Class Form1
     Friend WithEvents Label4 As Label
     Friend WithEvents ComboBoxGenre As ComboBox
     Friend WithEvents NumericUpDownDuration As NumericUpDown
-    Friend WithEvents TextBoxId As TextBox
+    Friend WithEvents TxtID As TextBox
     Friend WithEvents Label5 As Label
 End Class
